@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotmess Studios — Creative Collective</title>
+    <meta name="description" content="Hot Mess Studios — production, PR and consulting photo studio in Stockholm and Paris. Photo, video, tattoo, set design and events. Studio space for rent.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.hotmess.se/">
+    <meta name="theme-color" content="#1A0508">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hot Mess Studios">
+    <meta property="og:title" content="Hotmess Studios — Creative Collective">
+    <meta property="og:description" content="Production, PR and consulting photo studio in Stockholm and Paris. Studio space for rent.">
+    <meta property="og:url" content="https://www.hotmess.se/">
+    <meta property="og:image" content="https://www.hotmess.se/assets/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=VT323&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -14,7 +25,7 @@
             --pink-deep: #F29DAB;
             --red-dark: #8B1A2A;
             --red-mid: #C41E3A;
-            --cream: #FFF5F7;
+            --pink-light: #FFF5F7;
             --black: #1A0508;
         }
 
@@ -22,7 +33,7 @@
         html { scroll-behavior: smooth; }
 
         body {
-            background: var(--cream);
+            background: var(--pink-light);
             color: var(--black);
             font-family: 'Barlow', sans-serif;
             font-weight: 400;
@@ -99,7 +110,7 @@
         .nav-links a:hover { color: var(--red-mid); }
         .nav-cta {
             background: var(--red-dark) !important;
-            color: var(--cream) !important;
+            color: var(--pink-light) !important;
             padding: 9px 22px;
         }
         .nav-cta:hover { background: var(--red-mid) !important; }
@@ -175,7 +186,7 @@
             font-size: clamp(90px, 14vw, 210px);
             line-height: 0.88;
             letter-spacing: 4px;
-            color: var(--cream);
+            color: var(--pink-light);
             position: relative;
             z-index: 1;
             opacity: 0;
@@ -230,7 +241,7 @@
 
         .btn-primary {
             background: var(--red-mid);
-            color: var(--cream);
+            color: var(--pink-light);
             padding: 15px 38px;
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 13px;
@@ -248,7 +259,7 @@
 
         .btn-ghost {
             background: transparent;
-            color: var(--cream);
+            color: var(--pink-light);
             padding: 15px 38px;
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 13px;
@@ -259,7 +270,7 @@
             border: 2px solid rgba(255,245,247,0.28);
             transition: all 0.22s;
         }
-        .btn-ghost:hover { border-color: var(--cream); }
+        .btn-ghost:hover { border-color: var(--pink-light); }
 
         .hero-scroll {
             position: absolute;
@@ -344,7 +355,7 @@
         }
 
         /* ── SERVICES ── */
-        .services { background: var(--cream); }
+        .services { background: var(--pink-light); }
 
         .services-header {
             display: grid;
@@ -410,7 +421,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 32px;
             letter-spacing: 2px;
-            color: var(--cream);
+            color: var(--pink-light);
             line-height: 1.05;
         }
         .service-tag {
@@ -495,7 +506,7 @@
             transition: all 0.22s;
         }
         .rental-feature:hover {
-            background: var(--cream);
+            background: var(--pink-light);
             border-color: var(--red-mid);
         }
         .feat-icon {
@@ -550,20 +561,16 @@
         .work-item:nth-child(4) { background: linear-gradient(135deg, #3d1520, #1a050e); }
         .work-item:nth-child(5) { background: linear-gradient(45deg, #2a0a12, var(--red-dark)); }
 
-        .work-ph {
+        .work-item img {
             position: absolute;
             inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transition: transform 0.5s ease;
         }
-        .work-ph-text {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 15px;
-            letter-spacing: 4px;
-            color: rgba(255,191,204,0.12);
-            text-align: center;
-        }
+        .work-item:hover img { transform: scale(1.04); }
 
         .work-overlay {
             position: absolute;
@@ -587,17 +594,55 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 22px;
             letter-spacing: 1.5px;
-            color: var(--cream);
+            color: var(--pink-light);
             margin-top: 2px;
         }
 
+        /* ── TATTOO ── */
+        .tattoo { background: var(--black); border-top: 2px solid var(--red-dark); }
+        .tattoo .section-label { color: var(--pink-mid); }
+        .tattoo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 32px;
+            margin-bottom: 52px;
+        }
+        .tattoo-desc {
+            margin-top: 18px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: rgba(255,245,247,0.55);
+            max-width: 380px;
+        }
+        .tattoo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+        }
+        .tattoo-item {
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            background: #2a0812;
+            cursor: none;
+        }
+        .tattoo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .tattoo-item:hover img { transform: scale(1.04); }
+
         /* ── BRANDS ── */
-        .brands { background: var(--cream); padding: 80px 48px; }
+        .brands { background: var(--pink-light); padding: 80px 48px; }
         .brands-header { text-align: center; margin-bottom: 60px; }
 
         .brands-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 2px;
         }
         .brand-item {
@@ -606,6 +651,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
             transition: all 0.22s;
         }
         .brand-item:hover {
@@ -658,7 +704,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(56px, 9vw, 112px);
             letter-spacing: 4px;
-            color: var(--cream);
+            color: var(--pink-light);
             line-height: 0.92;
             margin-bottom: 24px;
         }
@@ -672,7 +718,7 @@
         .cta-btns { display: flex; gap: 16px; justify-content: center; }
 
         .btn-white {
-            background: var(--cream);
+            background: var(--pink-light);
             color: var(--red-dark);
             padding: 15px 44px;
             font-family: 'Barlow Condensed', sans-serif;
@@ -681,11 +727,11 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             text-decoration: none;
-            border: 2px solid var(--cream);
+            border: 2px solid var(--pink-light);
             display: inline-block;
             transition: all 0.22s;
         }
-        .btn-white:hover { background: transparent; color: var(--cream); }
+        .btn-white:hover { background: transparent; color: var(--pink-light); }
 
         /* ── INSTAGRAM ── */
         .instagram { background: var(--black); }
@@ -721,14 +767,11 @@
         .ig-item:nth-child(5) { background: linear-gradient(135deg, #2a0812, var(--red-dark)); }
         .ig-item:nth-child(6) { background: linear-gradient(45deg, var(--red-dark), #1a0508); }
 
-        .ig-ph {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: rgba(255,191,204,0.13);
+        .ig-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         .ig-overlay {
             position: absolute;
@@ -740,12 +783,13 @@
             opacity: 0;
             transition: opacity 0.24s;
         }
-        .ig-item:hover .ig-overlay { opacity: 1; }
+        .ig-item:hover .ig-overlay,
+        .tattoo-item:hover .ig-overlay { opacity: 1; }
         .ig-overlay span {
             font-family: 'VT323', monospace;
             font-size: 18px;
             letter-spacing: 2px;
-            color: var(--cream);
+            color: var(--pink-light);
         }
         .ig-follow {
             margin-top: 52px;
@@ -759,7 +803,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(40px, 5vw, 64px);
             letter-spacing: 4px;
-            color: var(--cream);
+            color: var(--pink-light);
         }
         .ig-follow-title span {
             -webkit-text-stroke: 2px var(--pink-mid);
@@ -783,7 +827,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 38px;
             letter-spacing: 4px;
-            color: var(--cream);
+            color: var(--pink-light);
             margin-bottom: 14px;
         }
         .footer-tagline {
@@ -828,7 +872,7 @@
             text-decoration: none;
             transition: color 0.2s;
         }
-        .footer-col ul li a:hover { color: var(--cream); }
+        .footer-col ul li a:hover { color: var(--pink-light); }
         .footer-bottom {
             padding-top: 28px;
             display: flex;
@@ -862,7 +906,6 @@
         /* ── RESPONSIVE ── */
         @media (max-width: 1100px) {
             .services-grid { grid-template-columns: repeat(3, 1fr); }
-            .brands-grid { grid-template-columns: repeat(3, 1fr); }
             .ig-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
         }
@@ -877,6 +920,10 @@
             .rental-content { padding: 48px 28px; }
             .work-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
             .work-item:first-child { grid-row: auto; }
+            .work-item { aspect-ratio: 4 / 5; }
+            .tattoo-header { flex-direction: column; align-items: flex-start; }
+            .tattoo-grid { grid-template-columns: repeat(2, 1fr); }
+            .brands-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-btns { flex-direction: column; }
             .cta-btns { flex-direction: column; align-items: center; }
             .ig-follow-title { font-size: 36px; }
@@ -900,9 +947,10 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#studio">Studio</a></li>
             <li><a href="#work">Work</a></li>
+            <li><a href="#tattoo">Tattoo</a></li>
             <li><a href="#brands">Clients</a></li>
             <li><a href="#instagram">Instagram</a></li>
-            <li><a href="#contact" class="nav-cta">Book Now</a></li>
+            <li><a href="mailto:contact@hotmess.se" class="nav-cta">Get in Touch</a></li>
         </ul>
     </nav>
 
@@ -1067,7 +1115,7 @@
                     </div>
                 </div>
                 <div class="rental-cta">
-                    <a href="#contact" class="btn-primary">Book the Space ✦</a>
+                    <a href="mailto:contact@hotmess.se" class="btn-primary">Get in Touch ✦</a>
                 </div>
             </div>
         </div>
@@ -1078,56 +1126,86 @@
         <div class="work-header reveal">
             <div>
                 <div class="section-label">Portfolio</div>
-                <h2 class="section-title" style="color:var(--cream)">FEATURED<br><span style="-webkit-text-stroke:2px var(--pink-mid);color:transparent">WORK</span></h2>
+                <h2 class="section-title" style="color:var(--pink-light)">FEATURED<br><span style="-webkit-text-stroke:2px var(--pink-mid);color:transparent">WORK</span></h2>
             </div>
-            <a href="#" class="btn-primary" style="padding:12px 28px; font-size:12px;">View All ✦</a>
+            <a href="https://www.instagram.com/hotmess_studios/" target="_blank" rel="noopener" class="btn-primary" style="padding:12px 28px; font-size:12px;">View All ✦</a>
         </div>
         <div class="work-grid reveal">
-            <div class="work-item">
-                <div class="work-ph"><div class="work-ph-text">PHOTO<br>CAMPAIGN</div></div>
+            <a class="work-item" href="https://www.instagram.com/p/DanZGdWDDzk/" target="_blank" rel="noopener">
+                <img src="assets/work/major-lazer-tradgarden.jpg" alt="Diplo performing with Major Lazer at Trädgården, Stockholm" loading="lazy" decoding="async">
+                <div class="work-overlay">
+                    <div>
+                        <div class="work-cat">Concerts</div>
+                        <div class="work-name">Major Lazer — Trädgården</div>
+                    </div>
+                </div>
+            </a>
+            <a class="work-item" href="https://www.instagram.com/p/DdvxWoXiLvE/" target="_blank" rel="noopener">
+                <img src="assets/work/keemchi-pre-opening.jpg" alt="Guests inside KEEMCHI's new location at the pre-opening hosted by Hot Mess" loading="lazy" decoding="async">
+                <div class="work-overlay">
+                    <div>
+                        <div class="work-cat">Events</div>
+                        <div class="work-name">KEEMCHI Pre-Opening</div>
+                    </div>
+                </div>
+            </a>
+            <a class="work-item" href="https://www.instagram.com/p/Db29qnAOQq3/" target="_blank" rel="noopener">
+                <img src="assets/work/studio-session.jpg" alt="Two models posing against a blue backdrop at Hot Mess Studios" loading="lazy" decoding="async">
                 <div class="work-overlay">
                     <div>
                         <div class="work-cat">Photography</div>
-                        <div class="work-name">Brand Campaign 2024</div>
+                        <div class="work-name">Studio Session</div>
                     </div>
                 </div>
-            </div>
-            <div class="work-item">
-                <div class="work-ph"><div class="work-ph-text">MUSIC<br>VIDEO</div></div>
+            </a>
+            <a class="work-item" href="https://www.instagram.com/p/DdWXkjNDKuJ/" target="_blank" rel="noopener">
+                <img src="assets/work/sproud-dinner.jpg" alt="Guest at the Sproud dinner at Studio Constance, shot on film" loading="lazy" decoding="async">
                 <div class="work-overlay">
                     <div>
-                        <div class="work-cat">Video</div>
-                        <div class="work-name">Music Video — Artist Name</div>
+                        <div class="work-cat">PR + Events</div>
+                        <div class="work-name">Sproud Dinner — Analog</div>
                     </div>
                 </div>
-            </div>
-            <div class="work-item">
-                <div class="work-ph"><div class="work-ph-text">TATTOO<br>FLASH</div></div>
+            </a>
+            <a class="work-item" href="https://www.instagram.com/p/DUdlUwtjK2q/" target="_blank" rel="noopener">
+                <img src="assets/work/paris-fashion-week.jpg" alt="Street style capture during Paris Fashion Week" loading="lazy" decoding="async">
                 <div class="work-overlay">
                     <div>
-                        <div class="work-cat">Tattoo</div>
-                        <div class="work-name">Flash Collection Vol.3</div>
+                        <div class="work-cat">Street</div>
+                        <div class="work-name">PFW Street Captures</div>
                     </div>
                 </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- TATTOO -->
+    <section class="tattoo" id="tattoo">
+        <div class="tattoo-header reveal">
+            <div>
+                <div class="section-label">Tattoo</div>
+                <h2 class="section-title" style="color:var(--pink-light)">INK BY<br><span style="-webkit-text-stroke:2px var(--pink-mid);color:transparent">PEACH</span></h2>
+                <p class="tattoo-desc">Custom pieces and flash by Peach. See more of her work on Instagram.</p>
             </div>
-            <div class="work-item">
-                <div class="work-ph"><div class="work-ph-text">SET<br>BUILD</div></div>
-                <div class="work-overlay">
-                    <div>
-                        <div class="work-cat">Set Design</div>
-                        <div class="work-name">Editorial Set — Magazine</div>
-                    </div>
-                </div>
-            </div>
-            <div class="work-item">
-                <div class="work-ph"><div class="work-ph-text">LIVE<br>SHOW</div></div>
-                <div class="work-overlay">
-                    <div>
-                        <div class="work-cat">Shows</div>
-                        <div class="work-name">Underground Showcase</div>
-                    </div>
-                </div>
-            </div>
+            <a href="https://www.instagram.com/inkbypeach/" target="_blank" rel="noopener" class="btn-primary" style="padding:12px 28px; font-size:12px;">@inkbypeach ✦</a>
+        </div>
+        <div class="tattoo-grid reveal">
+            <a class="tattoo-item" href="https://www.instagram.com/p/DQ_lXLvjPt3/" target="_blank" rel="noopener">
+                <img src="assets/tattoo/DQ_lXLvjPt3.jpg" alt="Dragon tattoo running down the spine" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>View on IG ↗</span></div>
+            </a>
+            <a class="tattoo-item" href="https://www.instagram.com/p/DeJ8jSICgQA/" target="_blank" rel="noopener">
+                <img src="assets/tattoo/DeJ8jSICgQA.jpg" alt="Fine-line portrait of a woman inside a crescent moon, shoulder tattoo" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>View on IG ↗</span></div>
+            </a>
+            <a class="tattoo-item" href="https://www.instagram.com/p/DOVy0lziC8h/" target="_blank" rel="noopener">
+                <img src="assets/tattoo/DOVy0lziC8h.jpg" alt="Matryoshka doll tattoo on the forearm" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>View on IG ↗</span></div>
+            </a>
+            <a class="tattoo-item" href="https://www.instagram.com/p/DeHBez9CkoF/" target="_blank" rel="noopener">
+                <img src="assets/tattoo/DeHBez9CkoF.jpg" alt="Greek vase with a plant, thigh tattoo" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>View on IG ↗</span></div>
+            </a>
         </div>
     </section>
 
@@ -1138,12 +1216,14 @@
             <h2 class="section-title" style="text-align:center">BRANDS WE'VE<br><span class="outline">WORKED WITH</span></h2>
         </div>
         <div class="brands-grid reveal">
-            <div class="brand-item"><div class="brand-name">CULT BEAUTY</div></div>
-            <div class="brand-item"><div class="brand-name">LOCAL NOISE</div></div>
-            <div class="brand-item"><div class="brand-name">VOID RECORDS</div></div>
-            <div class="brand-item"><div class="brand-name">NEON RIOT</div></div>
-            <div class="brand-item"><div class="brand-name">MOTH & FLAME</div></div>
-            <div class="brand-item"><div class="brand-name">REDLINE CO.</div></div>
+            <a class="brand-item" href="https://www.instagram.com/majorlazer/" target="_blank" rel="noopener"><div class="brand-name">MAJOR LAZER</div></a>
+            <a class="brand-item" href="https://www.instagram.com/tradgarden/" target="_blank" rel="noopener"><div class="brand-name">TRÄDGÅRDEN</div></a>
+            <a class="brand-item" href="https://www.instagram.com/keemchi/" target="_blank" rel="noopener"><div class="brand-name">KEEMCHI</div></a>
+            <a class="brand-item" href="https://www.instagram.com/dieselfragrances/" target="_blank" rel="noopener"><div class="brand-name">DIESEL</div></a>
+            <a class="brand-item" href="https://www.instagram.com/sproud/" target="_blank" rel="noopener"><div class="brand-name">SPROUD</div></a>
+            <a class="brand-item" href="https://www.instagram.com/letscreatese/" target="_blank" rel="noopener"><div class="brand-name">LET'S CREATE</div></a>
+            <a class="brand-item" href="https://www.instagram.com/mondo_sound/" target="_blank" rel="noopener"><div class="brand-name">MONDO</div></a>
+            <a class="brand-item" href="https://www.instagram.com/redgertcomms/" target="_blank" rel="noopener"><div class="brand-name">REDGERT COMMS</div></a>
         </div>
     </section>
 
@@ -1154,8 +1234,7 @@
             <h2 class="cta-title">LET'S MAKE<br>SOMETHING</h2>
             <p class="cta-sub">Whatever you're building — we want in. Shoot us a message and let's get weird together.</p>
             <div class="cta-btns">
-                <a href="mailto:hello@hotmessstudios.com" class="btn-white">Get In Touch</a>
-                <a href="#studio" class="btn-ghost" style="color:var(--cream); border-color:rgba(255,245,247,0.3)">Book the Studio</a>
+                <a href="mailto:contact@hotmess.se" class="btn-white">Get In Touch</a>
             </div>
         </div>
     </section>
@@ -1165,35 +1244,59 @@
         <div class="ig-header reveal">
             <div>
                 <div class="section-label" style="color:var(--pink-mid)">Follow Along</div>
-                <h2 class="section-title" style="color:var(--cream)">THE FEED</h2>
+                <h2 class="section-title" style="color:var(--pink-light)">THE FEED</h2>
             </div>
             <div class="ig-handle">hotmess_studios</div>
         </div>
         <div class="ig-grid reveal">
-            <div class="ig-item">
-                <div class="ig-ph">📷</div>
-                <div class="ig-overlay"><span>♥ 421</span></div>
-            </div>
-            <div class="ig-item">
-                <div class="ig-ph">🎬</div>
-                <div class="ig-overlay"><span>♥ 318</span></div>
-            </div>
-            <div class="ig-item">
-                <div class="ig-ph">🖤</div>
-                <div class="ig-overlay"><span>♥ 892</span></div>
-            </div>
-            <div class="ig-item">
-                <div class="ig-ph">🎭</div>
-                <div class="ig-overlay"><span>♥ 571</span></div>
-            </div>
-            <div class="ig-item">
-                <div class="ig-ph">🎤</div>
-                <div class="ig-overlay"><span>♥ 643</span></div>
-            </div>
-            <div class="ig-item">
-                <div class="ig-ph">✦</div>
+            <a class="ig-item" href="https://www.instagram.com/p/DLDOxz7t9Kt/" target="_blank" rel="noopener">
+                <img src="assets/feed/DLDOxz7t9Kt.jpg" alt="Performer on stage under blue light — all about details" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>♥ 50</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/DUdlUwtjK2q/" target="_blank" rel="noopener">
+                <img src="assets/feed/DUdlUwtjK2q.jpg" alt="Paris Fashion Week street capture by Violette Adam" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>♥ 20</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/Dd12exRsHCp/" target="_blank" rel="noopener">
+                <img src="assets/feed/Dd12exRsHCp.jpg" alt="Campaign video for Let's Create wellness festival, filmed at Hot Mess Studios" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>▶ ♥ 22</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/Dd0_6k8oPq7/" target="_blank" rel="noopener">
+                <img src="assets/feed/Dd0_6k8oPq7.jpg" alt="Outfit video with SEVN" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>▶ ♥ 160</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/DdvxWoXiLvE/" target="_blank" rel="noopener">
+                <img src="assets/feed/DdvxWoXiLvE.jpg" alt="KEEMCHI pre-opening hosted by Hot Mess" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>♥ 107</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/Ddt-LTAjHnp/" target="_blank" rel="noopener">
+                <img src="assets/feed/Ddt-LTAjHnp.jpg" alt="Photo corner at Spy Bar" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>♥ 73</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/DdWXkjNDKuJ/" target="_blank" rel="noopener">
+                <img src="assets/feed/DdWXkjNDKuJ.jpg" alt="Analog photos from the Sproud dinner at Studio Constance" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>♥ 131</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/Db29qnAOQq3/" target="_blank" rel="noopener">
+                <img src="assets/feed/Db29qnAOQq3.jpg" alt="Studio shoot at Hot Mess Studios" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>▶ ♥ 238</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/Dbxy1wnDFtz/" target="_blank" rel="noopener">
+                <img src="assets/feed/Dbxy1wnDFtz.jpg" alt="Skin on Skin after his set at Trädgården" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>♥ 76</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/DbrIpobMWJc/" target="_blank" rel="noopener">
+                <img src="assets/feed/DbrIpobMWJc.jpg" alt="Styling a client for her shoot" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>▶ ♥ 17</span></div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/DanZGdWDDzk/" target="_blank" rel="noopener">
+                <img src="assets/feed/DanZGdWDDzk.jpg" alt="Diplo and Major Lazer at Trädgården, analog and digital" loading="lazy" decoding="async">
                 <div class="ig-overlay"><span>♥ 234</span></div>
-            </div>
+            </a>
+            <a class="ig-item" href="https://www.instagram.com/p/Dak7SAGM3ye/" target="_blank" rel="noopener">
+                <img src="assets/feed/Dak7SAGM3ye.jpg" alt="Diesel Fragrances DESIRE launch nail salon at Les Ardentes" loading="lazy" decoding="async">
+                <div class="ig-overlay"><span>▶ ♥ 15</span></div>
+            </a>
         </div>
         <div class="ig-follow reveal">
             <p class="ig-follow-title">FOLLOW <span>@HOTMESS_STUDIOS</span></p>
@@ -1209,8 +1312,6 @@
                 <p class="footer-tagline">A creative collective doing it all. Photo · Video · Ink · Sets · Shows. Book us, rent us, or just come say hi.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/hotmess_studios/" target="_blank" rel="noopener" class="social-link">IG</a>
-                    <a href="#" class="social-link">TT</a>
-                    <a href="#" class="social-link">TW</a>
                 </div>
             </div>
             <div class="footer-col">
@@ -1218,7 +1319,7 @@
                 <ul>
                     <li><a href="#services">Photography</a></li>
                     <li><a href="#services">Video</a></li>
-                    <li><a href="#services">Tattoos</a></li>
+                    <li><a href="#tattoo">Tattoos</a></li>
                     <li><a href="#services">Set Design</a></li>
                     <li><a href="#services">Shows & Bookings</a></li>
                 </ul>
@@ -1235,7 +1336,7 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="mailto:hello@hotmessstudios.com">hello@hotmessstudios.com</a></li>
+                    <li><a href="mailto:contact@hotmess.se">contact@hotmess.se</a></li>
                     <li><a href="https://www.instagram.com/hotmess_studios/" target="_blank" rel="noopener">@hotmess_studios</a></li>
                     <li><a href="#contact">Book a Session</a></li>
                     <li><a href="#contact">General Enquiries</a></li>
@@ -1248,68 +1349,6 @@
         </div>
     </footer>
 
-    <script>
-        // Custom cursor
-        const cursor = document.getElementById('cursor');
-        const ring = document.getElementById('cursorRing');
-        let mx = 0, my = 0, rx = 0, ry = 0;
-
-        document.addEventListener('mousemove', e => {
-            mx = e.clientX; my = e.clientY;
-            cursor.style.left = mx + 'px';
-            cursor.style.top = my + 'px';
-        });
-
-        (function tick() {
-            rx += (mx - rx) * 0.11;
-            ry += (my - ry) * 0.11;
-            ring.style.left = rx + 'px';
-            ring.style.top = ry + 'px';
-            requestAnimationFrame(tick);
-        })();
-
-        document.querySelectorAll('a, button, .service-card, .work-item, .ig-item, .rental-feature, .brand-item').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.width = '20px';
-                cursor.style.height = '20px';
-                ring.style.width = '52px';
-                ring.style.height = '52px';
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.style.width = '12px';
-                cursor.style.height = '12px';
-                ring.style.width = '32px';
-                ring.style.height = '32px';
-            });
-        });
-
-        // Scroll reveal
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach((e, i) => {
-                if (e.isIntersecting) {
-                    setTimeout(() => e.target.classList.add('visible'), i * 60);
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Nav on scroll
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.style.background = window.scrollY > 60
-                ? 'rgba(255,245,247,0.97)'
-                : 'rgba(255,245,247,0.88)';
-        }, { passive: true });
-
-        // Smooth anchor scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const t = document.querySelector(a.getAttribute('href'));
-                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
