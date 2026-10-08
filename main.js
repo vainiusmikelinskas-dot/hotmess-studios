@@ -61,3 +61,51 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
     });
 });
+
+// Cookie notice: no non-essential tracking runs on this site today.
+// The visitor's choice is kept in localStorage; anything optional must
+// only be loaded from loadOptionalScripts() after "Accept".
+(function cookieNotice() {
+    const KEY = 'hm-cookie-consent';
+    const read = () => { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+    const write = v => { try { localStorage.setItem(KEY, v); } catch (e) { /* storage blocked */ } };
+
+    function loadOptionalScripts() {
+        // Nothing optional is loaded yet. Add analytics/pixels here, never in <head>.
+    }
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Cookie notice');
+    banner.hidden = true;
+    banner.innerHTML =
+        '<div class="cookie-title">Cookies ✦</div>' +
+        '<p>We don\'t use tracking or advertising cookies. Visits are counted with cookieless Vercel Web Analytics, and your choice here is saved in your browser. Read our <a href="/privacy">privacy policy</a>.</p>' +
+        '<div class="cookie-actions">' +
+        '<button type="button" data-consent="accepted">Accept</button>' +
+        '<button type="button" data-consent="declined">Decline</button>' +
+        '</div>';
+    document.body.appendChild(banner);
+
+    banner.querySelectorAll('[data-consent]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const v = btn.getAttribute('data-consent');
+            write(v);
+            banner.hidden = true;
+            if (v === 'accepted') loadOptionalScripts();
+        });
+    });
+
+    document.querySelectorAll('[data-cookie-settings]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            banner.hidden = false;
+            const first = banner.querySelector('button');
+            if (first) first.focus();
+        });
+    });
+
+    const choice = read();
+    if (choice === 'accepted') loadOptionalScripts();
+    else if (!choice) banner.hidden = false;
+})();
